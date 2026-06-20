@@ -21,8 +21,28 @@ conda create -n supervision python=3.11 -y
 conda activate supervision
 ```
 
-### 1.3 Instalar librerias de visión por computadora:
+### 1.3 Instalar PyTorch con soporte CUDA 13.0 (RTX 5050):
 ```bash
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu130
+```
+
+### 1.4 Instalar librerias de visión por computadora:
+```bash
+pip install supervision ultralytics trackers
+```
+
+### 1.5Instalar transformers (HuggingFace) y dependencias:
+```bash
+ pip install transformers
+```
+
+### 1.6 Instalar dependencias adicionales:
+```bash
+pip install scikit-learn pycocotools opencv-python tqdm
+```
+
+### 1.7 Instalar Jupyter (opcional):
+```bash
+ pip install jupyter
 ```
 
