@@ -230,9 +230,10 @@ FineTuning/
  - Tracking identico a analisis_partido.py
  - Dibuja mascaras individuales, cajas, etiquetas y nombres de clase
 
-    Comando:
-      python analisis_partido/analisis_partido_2.py "video.mov"
-
+* Comando:
+ ```bash
+  python analisis_partido/analisis_partido_2.py "video.mov"
+ ```
     Salida:
       - analisis_2_<video>.mp4  (video con tracking y mascaras)
       - centroides_2_<video>.csv (frame, robot_id, equipo, cx, cy, ball)
