@@ -158,14 +158,17 @@ FineTuning/
 
 * Flujo:
   * Carga el modelo desde soccer_sam3_final/
+    
   * Para cada imagen, ejecuta 5 inferencias (1 por clase)
-     Combina las mascaras en una imagen con colores:
-           limites           -> cyan
-           pelota            -> azul
-           porteria amarilla -> amarillo
-           porteria azul     -> naranja
-           robot             -> magenta
-      4. Guarda el resultado en sam3_training/outputs/inferencia/
+    
+  * Combina las mascaras en una imagen con colores:
+    - limites           -> cyan
+    - pelota            -> azul
+    - porteria amarilla -> amarillo
+    - porteria azul     -> naranja
+    - robot             -> magenta
+    
+    * Guarda el resultado en sam3_training/outputs/inferencia/
 
     Comando:
       python sam3_training/test_inference.py
