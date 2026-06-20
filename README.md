@@ -96,6 +96,11 @@ El proyecto se desarrollo y ejecutó localmente en un equipo con las siguientes 
         4. cancha           (cancha verde)
         5. robot            (todos los robots en general)
 
+<img width="1917" height="1036" alt="image" src="https://github.com/user-attachments/assets/180bf4a7-5aad-46de-9954-2c1d9cdfa506" />
+
+<img width="1918" height="1037" alt="image" src="https://github.com/user-attachments/assets/1d8b82e3-f081-49c1-b8b4-e2bdedd817aa" />
+
+
 4. Division del dataset
     - 120 imágenes para entrenamiento (train)
     - 30 imágenes para validación (valid)
