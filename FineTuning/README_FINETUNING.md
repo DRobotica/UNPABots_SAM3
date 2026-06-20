@@ -222,7 +222,7 @@ FineTuning/
   
 * Incluye Non-Maximum Suppression (NMS) para evitar mascaras duplicadas.
 
-*Pipeline por frame:
+* Pipeline por frame:
  - SAM3 segmenta cada clase por separado (5 llamadas, ~1s total)
  - NMS filtra mascaras duplicadas del mismo objeto
  - "limites" -> DBSCAN -> poligono de cancha (cada 10 frames)
@@ -234,10 +234,10 @@ FineTuning/
  ```bash
   python analisis_partido/analisis_partido_2.py "video.mov"
  ```
-    Salida:
-      - analisis_2_<video>.mp4  (video con tracking y mascaras)
-      - centroides_2_<video>.csv (frame, robot_id, equipo, cx, cy, ball)
-      - vertices_2_<video>.csv   (frame, vertice, x, y del poligono)
+ * Salida:
+ - analisis_2_<video>.mp4  (video con tracking y mascaras)
+ - centroides_2_<video>.csv (frame, robot_id, equipo, cx, cy, ball)
+ - vertices_2_<video>.csv   (frame, vertice, x, y del poligono)
 
 
 ====================================================================
