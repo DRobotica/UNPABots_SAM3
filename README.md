@@ -76,7 +76,9 @@ El proyecto se desarrollo y ejecutó localmente en un equipo con las siguientes 
 1. Captura de datos
     - Se utilizaron videos de partidos de la Copa FutBotMX
     - Los videos utilizados se encuentran en la carpeta DataForRoboflow (disponible en el link de drive)
-    - Se subieron a Roboflow (roboflow.com) para anotación 
+    - Se subieron a Roboflow (roboflow.com) para anotación
+  
+  
 <img width="1912" height="1032" alt="image" src="https://github.com/user-attachments/assets/965a7b81-8883-4801-8158-b12d1b7ab661" />
 
 2. Extracción de frames
