@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 5
+names: ['cancha', 'limites', 'pelota', 'porteria', 'robot']
+
+roboflow:
+  workspace: estud02-unpa-edu-mx
+  project: yolo-qb0ef
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/estud02-unpa-edu-mx/yolo-qb0ef/dataset/1

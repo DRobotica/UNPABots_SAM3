@@ -1,0 +1,24 @@
+# Bloqueo absoluto de extensiones de modelos pesados
+*.pt
+*.pth
+*.safetensors
+*.onnx
+
+# Bloquear cualquier archivo que empiece con sam3 o soccer_sam
+sam3*
+soccer_sam*
+
+# Bloqueo total de carpetas pesadas en cualquier nivel del proyecto
+**/FineTuning/DataForRoboflow/**
+**/DataForRoboflow/**
+**/.git/**
+
+# 1. Agrega exclusiones al .gitignore
+echo "" >> .gitignore
+echo "# Videos y archivos generados" >> .gitignore
+echo "*.mp4" >> .gitignore
+echo "*.mov" >> .gitignore
+echo "*.MOV" >> .gitignore
+echo "__pycache__/" >> .gitignore
+echo ".vscode/" >> .gitignore
+echo "*.csv" >> .gitignore
