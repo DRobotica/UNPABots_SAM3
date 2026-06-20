@@ -123,28 +123,30 @@ FineTuning/
 
 # 4.1 Script: sam3_training/train_sam3.py
 
-    Objetivo: Entrenar el mask_decoder de SAM3 para que aprenda a segmentar
+* Objetivo: Entrenar el mask_decoder de SAM3 para que aprenda a segmentar
     las 5 clases del dataset usando prompts de texto.
 
-    Arquitectura:
-      - Modelo base: facebook/sam3 (840M parametros)
-      - Solo se entrena el mask_decoder (~32M parametros, 3.9% del total)
-      - El resto (backbone ViT, encoder de texto, decoder DETR) se congela
-      - Loss: Binary Cross Entropy (BCE) + Dice Loss
-      - Optimizador: AdamW con learning rate 1e-5
+* Arquitectura:
+  - Modelo base: facebook/sam3 (840M parametros)
+  - Solo se entrena el mask_decoder (~32M parametros, 3.9% del total)
+  - El resto (backbone ViT, encoder de texto, decoder DETR) se congela
+  - Loss: Binary Cross Entropy (BCE) + Dice Loss
+  - Optimizador: AdamW con learning rate 1e-5
 
-    Dataset:
-      - Cada imagen genera una muestra por cada clase presente
-      - ~120 imagenes x ~4 clases = ~480 muestras de entrenamiento
-      - Batch size: 4
+  * Dataset:
+   - Cada imagen genera una muestra por cada clase presente
+   - ~120 imagenes x ~4 clases = ~480 muestras de entrenamiento
+   - Batch size: 4
 
-    Duracion del entrenamiento:
-      - Aproximadamente 12 horas para 10 epocas
+   * Duracion del entrenamiento:
+     - Aproximadamente 12 horas para 10 epocas
 
-    Comando:
+   * Comando:
+  ```bash
       python sam3_training/train_sam3.py
-
-    Salida:
+   ```
+   
+   * Salida:
       - Checkpoints en checkpoints/ (uno por epoca + el mejor)
       - Modelo final en soccer_sam3_final/ (listo para inferencia)
 
