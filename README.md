@@ -48,27 +48,27 @@ El proyecto se desarrollo y ejecutó localmente en un equipo con las siguientes 
   - Python 3.11 (via Anaconda)
   - 
 # Instalación del entorno
-1 Instalar Anaconda
+1. Instalar Anaconda
     Descarga: https://www.anaconda.com/download
     Seguir el instalador con opciones por defecto.
 
-2 Crear entorno conda con Python 3.11 y activarlo:
+2. Crear entorno conda con Python 3.11 y activarlo:
     conda create -n supervision python=3.11 -y
     conda activate supervision
 
-3 Instalar PyTorch con soporte CUDA 13.0 (RTX 5070 Ti):
+3. Instalar PyTorch con soporte CUDA 13.0 (RTX 5070 Ti):
     pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu130
 
-4 Instalar librerias de vision por computadora:
+4. Instalar librerias de vision por computadora:
     pip install supervision ultralytics trackers
 
-5 Instalar transformers (HuggingFace) y dependencias:
+5. Instalar transformers (HuggingFace) y dependencias:
     pip install transformers
 
-6 Instalar dependencias adicionales:
+6. Instalar dependencias adicionales:
     pip install scikit-learn pycocotools opencv-python tqdm timm numpy
 
-7 Instalar Jupyter (opcional):
+7. Instalar Jupyter (opcional):
     pip install jupyter
 
 Preparación del dataset (roboflow)
