@@ -236,7 +236,7 @@ FineTuning/
   python analisis_partido/analisis_partido_2.py "video.mov"
  ```
  * Salida:
- * 
+
 ```bash
  - analisis_2_<video>.mp4  (video con tracking y mascaras)
  - centroides_2_<video>.csv (frame, robot_id, equipo, cx, cy, ball)
