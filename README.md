@@ -115,7 +115,7 @@ El proyecto se desarrollo y ejecutó localmente en un equipo con las siguientes 
 ```text
 UNPABots_SAM3/
 |
-|-- FineTuning/                     # Entrenamiento y pruebas básicas de Fine-tuning de SAM3 (Primer proyecto descartado)
+|-- FineTuning/                     # Entrenamiento y pruebas básicas de Fine-tuning de SAM3 (Primer proyecto descartado), en el se encuentra su README
 |   
 |-- FineTuningYOLOv8/               # Entrenamiento de Fine-tuning de YOLOv8
 |   |-- dataset/                    # Dataset YOLOv8 para entrenamiento
