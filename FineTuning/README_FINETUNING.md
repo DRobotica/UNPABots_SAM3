@@ -178,7 +178,7 @@ FineTuning/
 
 # Prueba del modelo en video
 
-## Script: sam3_training/prueba_video.py
+## 6.1 Script: sam3_training/prueba_video.py
 
 * Objetivo: Procesar un video completo frame por frame con SAM3 fine-tuning, mostrando las mascaras de las 5 clases.
 
@@ -192,28 +192,29 @@ FineTuning/
 
 * Salida:
   - Video con mascaras coloreadas superpuestas
+    
+<img width="1918" height="1084" alt="image" src="https://github.com/user-attachments/assets/56c6e286-6224-4265-8a9d-4e8bf8ffb23e" />
 
 
-====================================================================
-  7. ANALISIS AVANZADO DE PARTIDO (SAM3 + DINOv2 + TRACKING)
-====================================================================
+ # Analisis avanzado de partido (SAM3 + DINOv2 + Tracking)
+ 
+## 7.1 Script: analisis_partido/analisis_partido.py
 
-7.1 Script: analisis_partido/analisis_partido.py
+* Usa SAM3 base (sam3.pt via ultralytics) con prompts:
+ - "white lines", "robot", "ball"
 
-    Usa SAM3 base (sam3.pt via ultralytics) con prompts:
-      "white lines", "robot", "ball"
+* Pipeline por frame:
+  - SAM3 segmenta los 3 conceptos en UNA llamada
+  - Lineas blancas -> DBSCAN -> poligono de la cancha
+  - Cada robot -> DINOv2 embedding (huella digital visual)
+  - Tracking: asigna IDs consistentes (R0-R3) por embedding + distancia
+  -  Clasifica robots en 2 equipos por similitud visual (frame 0)
+  -  Exporta CSV con posiciones y vertices de cancha
 
-    Pipeline por frame:
-      1. SAM3 segmenta los 3 conceptos en UNA llamada
-      2. Lineas blancas -> DBSCAN -> poligono de la cancha
-      3. Cada robot -> DINOv2 embedding (huella digital visual)
-      4. Tracking: asigna IDs consistentes (R0-R3) por embedding + distancia
-      5. Clasifica robots en 2 equipos por similitud visual (frame 0)
-      6. Exporta CSV con posiciones y vertices de cancha
-
-    Comando:
+  * Comando:
+ ```bash
       python analisis_partido/analisis_partido.py "video.mov"
-
+ ```
 
 7.2 Script: analisis_partido/analisis_partido_2.py
 
