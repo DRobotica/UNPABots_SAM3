@@ -110,6 +110,9 @@ El proyecto se desarrollo y ejecutó localmente en un equipo con las siguientes 
 
 # Estructura del proyecto
 
+# Estructura del proyecto
+
+```text
 UNPABots_SAM3/
 |
 |-- FineTuning/                     # Entrenamiento y pruebas básicas de Fine-tuning de SAM3 (Primer proyecto descartado)
