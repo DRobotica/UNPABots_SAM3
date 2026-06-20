@@ -46,7 +46,7 @@ El proyecto se desarrollo y ejecutó localmente en un equipo con las siguientes 
   - RAM: 32.0 GB
   - GPU: NVIDIA GeForce RTX 5070 Ti Laptop GPU (12 GB)
   - Python 3.11 (via Anaconda)
-  - 
+
 # Instalación del entorno
 1. Instalar Anaconda
     Descarga: https://www.anaconda.com/download
