@@ -168,11 +168,12 @@ FineTuning/
     - porteria azul     -> naranja
     - robot             -> magenta
     
-    * Guarda el resultado en sam3_training/outputs/inferencia/
+  * Guarda el resultado en sam3_training/outputs/inferencia/
 
-    Comando:
+  * Comando:
+ ```bash
       python sam3_training/test_inference.py
-
+```
 
 ====================================================================
   6. PRUEBA DEL MODELO EN VIDEO
