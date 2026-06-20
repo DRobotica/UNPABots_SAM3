@@ -35,7 +35,7 @@ El proyecto está modularizado en dos componentes principales para facilitar su 
 Para la parte de visualización se tienen dos componentes:
 1. `generavideotracking.py`: Script donde se genera un video a partir de los datos del archivo `.csv` con la vista cenital de la cancha de forma animada donde se muestra el tracking de los robots y la pelota.
 
-<img width="center" height="448" alt="Captura de pantalla 2026-06-20 051408" src="https://github.com/user-attachments/assets/462f6aed-8e90-425b-8218-d19ea55bec34" />
+<img width="345" height="448" alt="Captura de pantalla 2026-06-20 051408" src="https://github.com/user-attachments/assets/462f6aed-8e90-425b-8218-d19ea55bec34" />
 
 
 3. `generamapacalor.py`: Script donde se genera un mapa de calor a partir de los datos del archivo `.csv` donde se muestran las partes del campo donde estuvieron los robot y la pelota el mayor tiempo.
