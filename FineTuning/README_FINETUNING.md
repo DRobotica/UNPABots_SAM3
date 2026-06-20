@@ -78,7 +78,7 @@ pip install scikit-learn pycocotools opencv-python tqdm
 
 <img width="1917" height="1027" alt="image" src="https://github.com/user-attachments/assets/a20b4e53-fff6-4531-9dba-7e144c7de5db" />
 
-# 3. Estructura del proyecto
+# Estructura del proyecto
 
 ```text
 El proyecto completo ha sido agregado al link de drive para mayor claridad: https://drive.google.com/drive/folders/1jxJx3a7FrNykwqK2Q1bZ2tcAKyDSzxre?usp=sharing
