@@ -2,7 +2,6 @@
 Convocatoria Copa FutBotMX, Capítulo Visión por Computadora.
 
 # Analítica de Video y Visualización - Copa FutbotMX Capitulo Visión por Computadora
-
 Este proyecto implementa un pipeline de visión por computadora de dos etapas (YOLO + SAM 3) acoplado a un extractor de características DINOv2 para el seguimiento, clasificación por equipos y proyección cenital (Bird's-Eye View) de partidos de la Copa FutBotMX.
 El sistema está optimizado para ejecutarse localmente aprovechando la aceleración por hardware (CUDA) en GPUs de alto rendimiento (como la NVIDIA GeForce RTX 5070 Ti)
 
