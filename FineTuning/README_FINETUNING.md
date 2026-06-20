@@ -49,7 +49,7 @@ pip install scikit-learn pycocotools opencv-python tqdm
 
 ### 2.1 Captura de datos
 * Se utilizaron videos de partidos de la Copa FutBolMX
-* Videos originales en: `DataForRoboflow/`
+* Videos originales en: `DataForRoboflow/` los cuales se encuentran en el drive
 * Se subieron a Roboflow (roboflow.com) para anotación
 
 ### 2.2 Extracción de frames
@@ -59,6 +59,11 @@ pip install scikit-learn pycocotools opencv-python tqdm
 * De esas 1,500, se tomó solo el 10% (150 imágenes) para anotación
 * Se consideraron 5 clases: limites, pelota, porteria azul, porteria amarilla y robot
 * Las 150 imágenes se dividieron en: 120 train / 30 valid
+
+<img width="1912" height="1026" alt="image" src="https://github.com/user-attachments/assets/ace54ddd-39ea-4fbe-b7da-f26f1492d3b4" />
+
+<img width="1917" height="1027" alt="image" src="https://github.com/user-attachments/assets/a20b4e53-fff6-4531-9dba-7e144c7de5db" />
+
 
 ### 2.3 Segmentación semántica manual en Roboflow
 * Del total, se seleccionaron 150 imágenes para anotación
