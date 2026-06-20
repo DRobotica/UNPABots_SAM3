@@ -147,7 +147,6 @@ UNPABots_SAM3/
 |
 |-- LICENSE.txt
 ```
-
 # Reel de Instagram
 
 Se coloca un reel de Instagram en donde, de forma resumida, se presentan los resultados del proyecto:
