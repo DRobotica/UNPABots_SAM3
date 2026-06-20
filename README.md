@@ -73,20 +73,19 @@ El proyecto se desarrollo y ejecutó localmente en un equipo con las siguientes 
 
 # Preparación del dataset (roboflow)
 
-<img width="1912" height="1032" alt="image" src="https://github.com/user-attachments/assets/965a7b81-8883-4801-8158-b12d1b7ab661" />
-
-1 Captura de datos
+1. Captura de datos
     - Se utilizaron videos de partidos de la Copa FutBotMX
     - Los videos utilizados se encuentran en la carpeta DataForRoboflow (disponible en el link de drive)
-    - Se subieron a Roboflow (roboflow.com) para anotación
+    - Se subieron a Roboflow (roboflow.com) para anotación 
+<img width="1912" height="1032" alt="image" src="https://github.com/user-attachments/assets/965a7b81-8883-4801-8158-b12d1b7ab661" />
 
-2 Extracción de frames
+2. Extracción de frames
     - Se extrajo 1 frame cada 2 segundos de cada video
     - Total de imágenes obtenidas: 1,537
     - Se realizó la limpieza de datos duplicados/borrosos quedando 1,500 imágenes
     - Las 150 imágenes se dividieron en: 120 train / 30 valid
 
-3 Segmentación por detección de objetos en Roboflow
+3. Segmentación por detección de objetos en Roboflow
     - Del total de imágenes, se seleccionó el 10% (150 imágenes) para anotación
     - Se segmentaron manualmente 5 clases:
         1. limites          (líneas blancas de la cancha)
@@ -95,7 +94,7 @@ El proyecto se desarrollo y ejecutó localmente en un equipo con las siguientes 
         4. cancha           (cancha verde)
         5. robot            (todos los robots en general)
 
-4 Division del dataset
+4. Division del dataset
     - 120 imágenes para entrenamiento (train)
     - 30 imágenes para validación (valid)
     - Formato de exportación: YOLOv8
