@@ -68,11 +68,11 @@ pip install scikit-learn pycocotools opencv-python tqdm
 ### 2.3 Segmentación semántica manual en Roboflow
 * Se seleccionaron 150 imágenes del total para anotación
 * Se segmentaron manualmente 5 clases:
-    * **limites** (líneas de la cancha)
-    *  **pelota** (balón de fútbol)
-    *  **porteria amarilla**
-    *  **porteria azul**
-    *  **robot** (todos los robots en general)
+    * limites (líneas de la cancha)
+    *  pelota (balón de fútbol)
+    *  porteria amarilla
+    *  porteria azul
+    *  robot (todos los robots en general)
 
 ### 2.4 División del dataset
 * 120 imágenes para entrenamiento (`train`)
