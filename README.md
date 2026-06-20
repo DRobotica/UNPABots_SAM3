@@ -1,14 +1,12 @@
 # UNPABots_SAM3
 Convocatoria Copa FutBotMX, Capítulo Visión por Computadora.
 
-## Analítica de Video y Visualización - Copa FutbotMX Capitulo Visión por Computadora
+# Analítica de Video y Visualización - Copa FutbotMX Capitulo Visión por Computadora
 
+Este proyecto implementa un pipeline de visión por computadora de dos etapas (YOLO + SAM 3) acoplado a un extractor de características DINOv2 para el seguimiento, clasificación por equipos y proyección cenital (Bird's-Eye View) de partidos de la Copa FutBotMX.
+El sistema está optimizado para ejecutarse localmente aprovechando la aceleración por hardware (CUDA) en GPUs de alto rendimiento (como la NVIDIA GeForce RTX 5070 Ti)
 
-Este proyecto implementa un pipeline de visión computacional de dos etapas (YOLO + SAM 3) acoplado a un extractor de características DINOv2 para el seguimiento, clasificación por equipos y proyección cenital (Bird's-Eye View) de partidos de la copa FutbotMX.
-El sistema está optimizado para ejecutarse localmente aprovechando la aceleración por hardware (CUDA) en GPUs de alto rendimiento (como la NVIDIA GeForce RTX 5070 Ti).
----
-
-Características Clave
+# Características Clave
 
 Pipeline de Detección y Segmentación Eficiente: Utiliza un modelo YOLO personalizado para detectar los elementos del juego y delega los bounding boxes a SAM 3 para obtener máscaras de segmentación ultra-precisas.
 Clasificación y Tracking con DINOv2: Extrae embeddings visuales de las ROIs de los robots y aplica métricas de similitud coseno junto con DBSCAN para agruparlos automáticamente en 2 equipos y mantener sus IDs de forma persistente (soporta hasta 4 IDs simultáneos en juego).
