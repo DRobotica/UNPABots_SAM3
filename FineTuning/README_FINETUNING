@@ -7,14 +7,3 @@
 * Memoria RAM: 16.0 GB
 * GPU: NVIDIA GeForce RTX 5050 Laptop GPU (8 GB VRAM)
 * Entorno: Python 3.11 (vía Anaconda)
-
-## 1. 🛠️ Instalación del Entorno
-
-### 1.1 Instalar Anaconda
-Descarga el instalador desde la [página oficial de Anaconda](https://www.anaconda.com/download) y sigue los pasos con las opciones por defecto.
-
-### 1.2 Crear y activar el entorno conda
-Abre tu terminal o Anaconda Prompt y ejecuta:
-```bash
-conda create -n supervision python=3.11 -y
-conda activate supervision
