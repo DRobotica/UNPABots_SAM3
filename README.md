@@ -3,7 +3,7 @@ Convocatoria Copa FutBotMX, Capítulo Visión por Computadora.
 
 # Analítica de Video y Visualización - Copa FutbotMX Capitulo Visión por Computadora
 Este proyecto implementa un pipeline de visión por computadora de dos etapas (YOLO + SAM 3) acoplado a un extractor de características DINOv2 para el seguimiento, clasificación por equipos y proyección cenital (Bird's-Eye View) de partidos de la Copa FutBotMX.
-El sistema está optimizado para ejecutarse localmente aprovechando la aceleración por hardware (CUDA) en GPUs de alto rendimiento (como la NVIDIA GeForce RTX 5070 Ti)
+El sistema está optimizado para ejecutarse localmente aprovechando la aceleración por hardware (CUDA) en GPUs de alto rendimiento (como la NVIDIA GeForce RTX 5070 Ti).
 
 # Características Clave
 * Pipeline de detección y segmentación eficiente: Utiliza un modelo YOLO personalizado para detectar los elementos del juego y delega los bounding boxes a SAM 3 para obtener máscaras de segmentación ultra-precisas.
@@ -37,9 +37,9 @@ Para la parte de visualización se tienen dos componentes:
 2. `generamapacalor.py`: Script donde se genera un mapa de calor a partir de los datos del archivo `.csv` donde se muestran las partes del campo donde estuvieron los robot y la pelota el mayor tiempo.
 
 
-Requisitos e Instalación
+# Requisitos e Instalación
 
-Especificaciones del equipo
+## Especificaciones del equipo
 
 El proyecto se desarrollo y ejecutó localmente en un equipo con las siguientes especificaciones:
   - Windows 11
