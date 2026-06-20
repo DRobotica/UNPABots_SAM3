@@ -212,7 +212,7 @@ FineTuning/
   -  Clasifica robots en 2 equipos por similitud visual (frame 0)
   -  Exporta CSV con posiciones y vertices de cancha
 
-  * Comando:
+* Comando:
  ```bash
       python analisis_partido/analisis_partido.py "video.mov"
  ```
@@ -235,26 +235,26 @@ FineTuning/
   python analisis_partido/analisis_partido_2.py "video.mov"
  ```
  * Salida:
+   
  - analisis_2_<video>.mp4  (video con tracking y mascaras)
  - centroides_2_<video>.csv (frame, robot_id, equipo, cx, cy, ball)
  - vertices_2_<video>.csv   (frame, vertice, x, y del poligono)
 
+<img width="1905" height="1076" alt="image" src="https://github.com/user-attachments/assets/5bbc4f56-567a-47f2-8f98-4a0281d61c65" />
 
-====================================================================
-  8. NOTAS IMPORTANTES
-====================================================================
+# Notas
 
-8.1 Archivo sam3.pt
-    - Modelo base de Meta (~3.4 GB)
-    - Solo lo usa analisis_partido.py 
-    - Requiere acceso a HuggingFace: https://huggingface.co/facebook/sam3
+* Archivo sam3.pt
+  - Modelo base de Meta (~3.4 GB)
+  - Solo lo usa analisis_partido.py 
+  - Requiere acceso a HuggingFace: https://huggingface.co/facebook/sam3
 
-8.2 Modelo fine-tuning (soccer_sam3_final/)
-    - Formato HuggingFace, listo para cargar con Sam3Model.from_pretrained()
-    - Lo usan: test_inference.py, prueba_video.py, analisis_partido_2.py
-    - NO es compatible con el codigo de analisis_partido.py (que usa ultralytics)
+* Modelo fine-tuning (soccer_sam3_final/)
+   - Formato HuggingFace, listo para cargar con Sam3Model.from_pretrained()
+   - Lo usan: test_inference.py, prueba_video.py, analisis_partido_2.py
+   - NO es compatible con el codigo de analisis_partido.py (que usa ultralytics)
 
-8.3 Compatibilidad
-    - Todo el proyecto fue desarrollado y probado en Windows 11
-    - Entorno conda: supervision (Python 3.11)
-    - GPU: NVIDIA RTX 5050 Laptop (8 GB VRAM, CUDA 13.0)
+* Compatibilidad
+  - Todo el proyecto fue desarrollado y probado en Windows 11
+  - Entorno conda: supervision (Python 3.11)
+  - GPU: NVIDIA RTX 5050 Laptop (8 GB VRAM, CUDA 13.0)
