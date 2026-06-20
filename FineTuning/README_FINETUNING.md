@@ -192,6 +192,7 @@ FineTuning/
 
 * Salida:
   - Video con mascaras coloreadas superpuestas
+
     
 <img width="1918" height="1084" alt="image" src="https://github.com/user-attachments/assets/56c6e286-6224-4265-8a9d-4e8bf8ffb23e" />
 
@@ -215,19 +216,19 @@ FineTuning/
  ```bash
       python analisis_partido/analisis_partido.py "video.mov"
  ```
+## 7.2 Script: analisis_partido/analisis_partido_2.py
 
-7.2 Script: analisis_partido/analisis_partido_2.py
+* Usa el modelo SAM3 fine-tuning (soccer_sam3_final/) con tus 5 clases.
+  
+* Incluye Non-Maximum Suppression (NMS) para evitar mascaras duplicadas.
 
-    Usa el modelo SAM3 fine-tuning (soccer_sam3_final/) con tus 5 clases.
-    Incluye Non-Maximum Suppression (NMS) para evitar mascaras duplicadas.
-
-    Pipeline por frame:
-      1. SAM3 segmenta cada clase por separado (5 llamadas, ~1s total)
-      2. NMS filtra mascaras duplicadas del mismo objeto
-      3. "limites" -> DBSCAN -> poligono de cancha (cada 10 frames)
-      4. Cada instancia de "robot" -> DINOv2 embedding individual
-      5. Tracking identico a analisis_partido.py
-      6. Dibuja mascaras individuales, cajas, etiquetas y nombres de clase
+*Pipeline por frame:
+ - SAM3 segmenta cada clase por separado (5 llamadas, ~1s total)
+ - NMS filtra mascaras duplicadas del mismo objeto
+ - "limites" -> DBSCAN -> poligono de cancha (cada 10 frames)
+ -  Cada instancia de "robot" -> DINOv2 embedding individual
+ - Tracking identico a analisis_partido.py
+ - Dibuja mascaras individuales, cajas, etiquetas y nombres de clase
 
     Comando:
       python analisis_partido/analisis_partido_2.py "video.mov"
