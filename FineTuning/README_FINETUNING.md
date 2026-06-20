@@ -157,9 +157,9 @@ FineTuning/
     individuales del dataset de validacion.
 
 * Flujo:
-  ** Carga el modelo desde soccer_sam3_final/
-  ** Para cada imagen, ejecuta 5 inferencias (1 por clase)
-  ** Combina las mascaras en una imagen con colores:
+  * Carga el modelo desde soccer_sam3_final/
+  * Para cada imagen, ejecuta 5 inferencias (1 por clase)
+     Combina las mascaras en una imagen con colores:
            limites           -> cyan
            pelota            -> azul
            porteria amarilla -> amarillo
