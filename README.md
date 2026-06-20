@@ -22,17 +22,16 @@ El sistema está optimizado para ejecutarse localmente aprovechando la aceleraci
 # Arquitectura del Software
 
 El proyecto está modularizado en dos componentes principales para facilitar su mantenimiento:
-
-1.- `helpers.py` Módulo que aloja las funciones matemáticas y algorítmicas secundarias:
-* Ordenamiento de vértices en sentido horario para homografía.
-* Extracción robusta de envolvente convexa (Convex Hull).
-* Cálculo de similitud coseno y agrupamiento de vectores DINOv2.
-2.- `main.py`: Script principal encargado de coordinar el flujo de datos:
-* Inicialización y alojamiento de modelos en la GPU (`cuda`).
-* Lectura y procesamiento secuencial del video del partido.
-* Renderizado de máscaras translúcidas y etiquetas visuales.
-* Escritura síncrona de los archivos de video resultantes y base de datos de telemetría.
-
+1. `helpers.py`: Módulo que aloja las funciones matemáticas y algorítmicas secundarias:
+    * Ordenamiento de vértices en sentido horario para homografía.
+    * Extracción robusta de envolvente convexa (*Convex Hull*).
+    * Cálculo de similitud coseno y agrupamiento de vectores DINOv2.
+2. `main.py`: Script principal encargado de coordinar el flujo de datos:
+    * Inicialización y alojamiento de modelos en la GPU (`cuda`).
+    * Lectura y procesamiento secuencial del video del partido.
+    * Renderizado de máscaras translúcidas y etiquetas visuales.
+    * Escritura síncrona de los archivos de video resultantes y base de datos de telemetría.
+      
 Para la parte de visualización se tienen dos componentes:
 `generavideotracking.py`: Script donde se genera un video a partir de los datos del archivo `.csv` con la vista cenital de la cancha de forma animada donde se muestra el tracking de los robots y la pelota.
 `generamapacalor.py`: Script donde se genera un mapa de calor a partir de los datos del archivo `.csv` donde se muestran las partes del campo donde estuvieron los robot y la pelota el mayor tiempo.
