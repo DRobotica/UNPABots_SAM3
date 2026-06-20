@@ -1,5 +1,5 @@
 # Fine-Tuning SAM3 para FutBotMX
-# Copa FutBotMX - Segmentación de robots, pelota, porterías y límites
+## Copa FutBotMX - Segmentación de robots, pelota, porterías y límites
 
 # Especificaciones de la máquina
 * Sistema Operativo: Windows 11
