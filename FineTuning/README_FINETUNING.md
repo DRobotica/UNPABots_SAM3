@@ -81,6 +81,7 @@ pip install scikit-learn pycocotools opencv-python tqdm
 # 3. Estructura del proyecto
 
 ```text
+El proyecto completo ha sido agregado al link de drive para su mayor entendimiento: https://drive.google.com/drive/folders/1jxJx3a7FrNykwqK2Q1bZ2tcAKyDSzxre?usp=sharing
 FineTuning/
 |
 |-- sam3_training/                  # Entrenamiento y pruebas básicas de SAM3
