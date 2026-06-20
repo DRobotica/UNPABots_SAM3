@@ -224,12 +224,12 @@ FineTuning/
 * Incluye Non-Maximum Suppression (NMS) para evitar mascaras duplicadas.
 
 * Pipeline por frame:
-  - SAM3 segmenta cada clase por separado (5 llamadas, ~1s total)
-  - NMS filtra mascaras duplicadas del mismo objeto
-  - "limites" -> DBSCAN -> poligono de cancha (cada 10 frames)
-  -  Cada instancia de "robot" -> DINOv2 embedding individual
-  - Tracking identico a analisis_partido.py
-  - Dibuja mascaras individuales, cajas, etiquetas y nombres de clase
+    - SAM3 segmenta cada clase por separado (5 llamadas, ~1s total)
+    - NMS filtra mascaras duplicadas del mismo objeto
+    - "limites" -> DBSCAN -> poligono de cancha (cada 10 frames)
+    -  Cada instancia de "robot" -> DINOv2 embedding individual
+    - Tracking identico a analisis_partido.py
+    - Dibuja mascaras individuales, cajas, etiquetas y nombres de clase
 
 * Comando:
  ```bash
