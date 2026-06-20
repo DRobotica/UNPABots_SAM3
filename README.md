@@ -10,7 +10,7 @@ El sistema está optimizado para ejecutarse localmente aprovechando la aceleraci
   
 * Clasificación y tracking con DINOv2: Extrae embeddings visuales de las ROIs de los robots y aplica métricas de similitud coseno junto con DBSCAN para agruparlos automáticamente en 2 equipos y mantener sus IDs de forma persistente (soporta hasta 4 IDs simultáneos en juego).
   
-* Homografía rígida automatizada: Corrige la perspectiva de la cámara para generar un plano táctico cenital basado en las dimensiones reales de la cancha (219 \times 158 cm) con una resolución escalada a 2 píxeles por centímetro.
+* Homografía rígida automatizada: Corrige la perspectiva de la cámara para generar un plano táctico cenital basado en las dimensiones reales de la cancha (219 × 158 cm) con una resolución escalada a 2 píxeles por centímetro.
 
 * Estabilización geométrica avanzada: Incorpora un filtro de historial de frames (promedio móvil) combinado con puntos de control basados en el centroide de las porterías para mitigar vibraciones y oclusiones en los vértices.
   
