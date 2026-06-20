@@ -108,9 +108,7 @@ El proyecto se desarrollo y ejecutó localmente en un equipo con las siguientes 
   
 <img width="1917" height="1032" alt="image" src="https://github.com/user-attachments/assets/1f688c5f-e54f-4cc8-b062-fcaca7636740" />
 
-
-
-Estructura del proyecto
+# Estructura del proyecto
 
 UNPABots_SAM3/
 |
@@ -118,12 +116,12 @@ UNPABots_SAM3/
 |   
 |-- FineTuningYOLOv8/               # Entrenamiento de Fine-tuning de YOLOv8
 |   |-- dataset/                    # Dataset YOLOv8 para entrenamiento
-|       |-- train/                  # Imágenes de entrenamiento
-|       |-- valid/                  # Imágenes de validación
-|       |-- data.yaml               # Clases segmentadas
+|   |   |-- train/                  # Imágenes de entrenamiento
+|   |   |-- valid/                  # Imágenes de validación
+|   |   |-- data.yaml               # Clases segmentadas
 |   |-- train_yolo.py               # Script de entrenamiento
-|   |-- yolo26n.pt                  # 
-|   |-- yolov8s.pt                  # 
+|   |-- yolo26n.pt                  #
+|   |-- yolov8s.pt                  #
 |
 |-- bestv8s.pt                      # Modelo de YOLOv8 personalizado (fine-tuning)
 |-- generarmapacalor.py             # Script para generar el mapa de calor
@@ -145,7 +143,6 @@ UNPABots_SAM3/
 |-- video2.mp4                      # Video de prueba 2
 |
 |-- LICENSE.txt
-
 
 Reel de Instagram
 
