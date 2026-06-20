@@ -8,7 +8,7 @@
 * GPU: NVIDIA GeForce RTX 5050 Laptop GPU (8 GB VRAM)
 * Entorno: Python 3.11 (vía Anaconda)
 
-#Instalación del entorno: 
+# Instalación del entorno: 
 
 ### 1.1 Instalar Anaconda
 Descarga: https://www.anaconda.com/download
@@ -121,7 +121,7 @@ FineTuning/
 ```
 # Entrenamiento del modelo SAM3
 
-# 4.1 Script: sam3_training/train_sam3.py
+## 4.1 Script: sam3_training/train_sam3.py
 
 * Objetivo: Entrenar el mask_decoder de SAM3 para que aprenda a segmentar
     las 5 clases del dataset usando prompts de texto.
@@ -151,15 +151,15 @@ FineTuning/
 
 # Prueba del modelo en imágenes
 
-# 5.1 Script: sam3_training/test_inference.py
+## 5.1 Script: sam3_training/test_inference.py
 
-    Objetivo: Cargar el modelo fine-tuning y probarlo en imagenes
+* Objetivo: Cargar el modelo fine-tuning y probarlo en imagenes
     individuales del dataset de validacion.
 
-    Flujo:
-      1. Carga el modelo desde soccer_sam3_final/
-      2. Para cada imagen, ejecuta 5 inferencias (1 por clase)
-      3. Combina las mascaras en una imagen con colores:
+* Flujo:
+  ** Carga el modelo desde soccer_sam3_final/
+  ** Para cada imagen, ejecuta 5 inferencias (1 por clase)
+  ** Combina las mascaras en una imagen con colores:
            limites           -> cyan
            pelota            -> azul
            porteria amarilla -> amarillo
