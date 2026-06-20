@@ -12,9 +12,17 @@
 
 ### 1.1 Instalar Anaconda
 Descarga: https://www.anaconda.com/download
+
 Seguir el instalador con opciones por defecto.
 
 ### 1.2 Crear entorno conda con Python 3.11 y activarlo:
 ```bash
 conda create -n supervision python=3.11 -y
 conda activate supervision
+```
+
+### 1.3 Instalar librerias de visión por computadora:
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu130
+```
+
