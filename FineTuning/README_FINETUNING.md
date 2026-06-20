@@ -177,22 +177,20 @@ FineTuning/
 
 # Prueba del modelo en video
 
-6.1 Script: sam3_training/prueba_video.py
+## Script: sam3_training/prueba_video.py
 
-    Objetivo: Procesar un video completo frame por frame con SAM3
-    fine-tuning, mostrando las mascaras de las 5 clases.
+* Objetivo: Procesar un video completo frame por frame con SAM3 fine-tuning, mostrando las mascaras de las 5 clases.
 
-    Modos de uso:
-      - Con video:   python sam3_training/prueba_video.py "video.mov"
-      - Simulacion:  python sam3_training/prueba_video.py
-                     (usa los frames del dataset como video)
+* Modos de uso:
+  - Con video:   python sam3_training/prueba_video.py "video.mov"
+  - Simulacion:  python sam3_training/prueba_video.py (usa los frames del dataset como video)
 
-    Duracion:
-      - Videos de 8-16 segundos: aproximadamente 2-3 horas
-      - SAM3 procesa ~5 inferencias por frame (~200ms cada una)
+* Duracion:
+  - Videos de 8-16 segundos: aproximadamente 2-3 horas
+  - SAM3 procesa ~5 inferencias por frame (~200ms cada una)
 
-    Salida:
-      - Video con mascaras coloreadas superpuestas
+* Salida:
+  - Video con mascaras coloreadas superpuestas
 
 
 ====================================================================
