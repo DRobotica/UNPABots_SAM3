@@ -22,7 +22,7 @@ El sistema está optimizado para ejecutarse localmente aprovechando la aceleraci
 # Arquitectura del Software
 
 El proyecto está modularizado en dos componentes principales para facilitar su mantenimiento:
-`helpers.py`: Módulo que aloja las funciones matemáticas y algorítmicas secundarias:
+`helpers.py` Módulo que aloja las funciones matemáticas y algorítmicas secundarias:
 Ordenamiento de vértices en sentido horario para homografía.
 Extracción robusta de envolvente convexa (Convex Hull).
 Cálculo de similitud coseno y agrupamiento de vectores DINOv2.
