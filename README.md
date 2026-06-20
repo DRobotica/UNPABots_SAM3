@@ -46,7 +46,7 @@ Para la parte de visualización se tienen dos componentes:
 
 3. `generamapacalor.py`: Script donde se genera un mapa de calor a partir de los datos del archivo `.csv` donde se muestran las partes del campo donde estuvieron los robot y la pelota el mayor tiempo.
 
-<img width="700" height="930" alt="mapacalor_1" src="https://github.com/user-attachments/assets/016a0384-1203-4467-b1f7-776c7a4afc0c" />
+<img width="345" height="448" alt="mapacalor_1" src="https://github.com/user-attachments/assets/016a0384-1203-4467-b1f7-776c7a4afc0c" />
 
 
 # Requisitos e Instalación
