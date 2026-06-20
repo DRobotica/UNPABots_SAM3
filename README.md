@@ -15,7 +15,7 @@ El sistema está optimizado para ejecutarse localmente aprovechando la aceleraci
   
 * Homografía rígida automatizada: Corrige la perspectiva de la cámara para generar un plano táctico cenital basado en las dimensiones reales de la cancha (219 × 158 cm) con una resolución escalada a 2 píxeles por centímetro.
 
-<img width="220" height="156" alt="Captura de pantalla 2026-06-20 051914" src="https://github.com/user-attachments/assets/90095520-20d5-4280-92e8-b297bc89aff0" />
+<img width="359" height="640" alt="Captura de pantalla 2026-06-20 051914" src="https://github.com/user-attachments/assets/90095520-20d5-4280-92e8-b297bc89aff0" />
 
 
 * Estabilización geométrica avanzada: Incorpora un filtro de historial de frames (promedio móvil) combinado con puntos de control basados en el centroide de las porterías para mitigar vibraciones y oclusiones en los vértices.
