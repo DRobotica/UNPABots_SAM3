@@ -71,7 +71,9 @@ El proyecto se desarrollo y ejecutó localmente en un equipo con las siguientes 
 7. Instalar Jupyter (opcional):
     pip install jupyter
 
-Preparación del dataset (roboflow)
+# Preparación del dataset (roboflow)
+
+<img width="1912" height="1032" alt="image" src="https://github.com/user-attachments/assets/965a7b81-8883-4801-8158-b12d1b7ab661" />
 
 1 Captura de datos
     - Se utilizaron videos de partidos de la Copa FutBotMX
