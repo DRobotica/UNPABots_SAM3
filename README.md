@@ -14,7 +14,7 @@ El sistema está optimizado para ejecutarse localmente aprovechando la aceleraci
 
 * Estabilización geométrica avanzada: Incorpora un filtro de historial de frames (promedio móvil) combinado con puntos de control basados en el centroide de las porterías para mitigar vibraciones y oclusiones en los vértices.
   
-* Exportación de telemetría: Genera de manera incondicional un archivo `.csv` continuo con las coordenadas de píxeles y cenitales de los robots y la pelota frame a frame.
+* Exportación de elemetría:** Genera de manera incondicional un archivo `.csv` continuo con las coordenadas de píxeles y cenitales de los robots y la pelota frame a frame.
   
 * Visualización de estadísticas: Con los datos del archivo `.csv` genera un video del tracking de los robots y la pelota y un mapa de calor del partido.
 
