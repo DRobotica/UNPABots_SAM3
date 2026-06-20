@@ -81,7 +81,7 @@ pip install scikit-learn pycocotools opencv-python tqdm
 # 3. Estructura del proyecto
 
 ```text
-El proyecto completo ha sido agregado al link de drive para su mayor entendimiento: https://drive.google.com/drive/folders/1jxJx3a7FrNykwqK2Q1bZ2tcAKyDSzxre?usp=sharing
+El proyecto completo ha sido agregado al link de drive para mayor claridad: https://drive.google.com/drive/folders/1jxJx3a7FrNykwqK2Q1bZ2tcAKyDSzxre?usp=sharing
 FineTuning/
 |
 |-- sam3_training/                  # Entrenamiento y pruebas básicas de SAM3
@@ -119,3 +119,142 @@ FineTuning/
 |-- recortado.mp4                   # Video recortado de prueba
 |-- LICENSE.txt
 ```
+====================================================================
+  4. ENTRENAMIENTO DEL MODELO SAM3 (FINE-TUNING)
+====================================================================
+
+4.1 Script: sam3_training/train_sam3.py
+
+    Objetivo: Entrenar el mask_decoder de SAM3 para que aprenda a segmentar
+    las 5 clases del dataset usando prompts de texto.
+
+    Arquitectura:
+      - Modelo base: facebook/sam3 (840M parametros)
+      - Solo se entrena el mask_decoder (~32M parametros, 3.9% del total)
+      - El resto (backbone ViT, encoder de texto, decoder DETR) se congela
+      - Loss: Binary Cross Entropy (BCE) + Dice Loss
+      - Optimizador: AdamW con learning rate 1e-5
+
+    Dataset:
+      - Cada imagen genera una muestra por cada clase presente
+      - ~120 imagenes x ~4 clases = ~480 muestras de entrenamiento
+      - Batch size: 4
+
+    Duracion del entrenamiento:
+      - Aproximadamente 12 horas para 10 epocas
+
+    Comando:
+      python sam3_training/train_sam3.py
+
+    Salida:
+      - Checkpoints en checkpoints/ (uno por epoca + el mejor)
+      - Modelo final en soccer_sam3_final/ (listo para inferencia)
+
+
+====================================================================
+  5. PRUEBA DEL MODELO EN IMAGENES
+====================================================================
+
+5.1 Script: sam3_training/test_inference.py
+
+    Objetivo: Cargar el modelo fine-tuning y probarlo en imagenes
+    individuales del dataset de validacion.
+
+    Flujo:
+      1. Carga el modelo desde soccer_sam3_final/
+      2. Para cada imagen, ejecuta 5 inferencias (1 por clase)
+      3. Combina las mascaras en una imagen con colores:
+           limites           -> cyan
+           pelota            -> azul
+           porteria amarilla -> amarillo
+           porteria azul     -> naranja
+           robot             -> magenta
+      4. Guarda el resultado en sam3_training/outputs/inferencia/
+
+    Comando:
+      python sam3_training/test_inference.py
+
+
+====================================================================
+  6. PRUEBA DEL MODELO EN VIDEO
+====================================================================
+
+6.1 Script: sam3_training/prueba_video.py
+
+    Objetivo: Procesar un video completo frame por frame con SAM3
+    fine-tuning, mostrando las mascaras de las 5 clases.
+
+    Modos de uso:
+      - Con video:   python sam3_training/prueba_video.py "video.mov"
+      - Simulacion:  python sam3_training/prueba_video.py
+                     (usa los frames del dataset como video)
+
+    Duracion:
+      - Videos de 8-16 segundos: aproximadamente 2-3 horas
+      - SAM3 procesa ~5 inferencias por frame (~200ms cada una)
+
+    Salida:
+      - Video con mascaras coloreadas superpuestas
+
+
+====================================================================
+  7. ANALISIS AVANZADO DE PARTIDO (SAM3 + DINOv2 + TRACKING)
+====================================================================
+
+7.1 Script: analisis_partido/analisis_partido.py
+
+    Usa SAM3 base (sam3.pt via ultralytics) con prompts:
+      "white lines", "robot", "ball"
+
+    Pipeline por frame:
+      1. SAM3 segmenta los 3 conceptos en UNA llamada
+      2. Lineas blancas -> DBSCAN -> poligono de la cancha
+      3. Cada robot -> DINOv2 embedding (huella digital visual)
+      4. Tracking: asigna IDs consistentes (R0-R3) por embedding + distancia
+      5. Clasifica robots en 2 equipos por similitud visual (frame 0)
+      6. Exporta CSV con posiciones y vertices de cancha
+
+    Comando:
+      python analisis_partido/analisis_partido.py "video.mov"
+
+
+7.2 Script: analisis_partido/analisis_partido_2.py
+
+    Usa el modelo SAM3 fine-tuning (soccer_sam3_final/) con tus 5 clases.
+    Incluye Non-Maximum Suppression (NMS) para evitar mascaras duplicadas.
+
+    Pipeline por frame:
+      1. SAM3 segmenta cada clase por separado (5 llamadas, ~1s total)
+      2. NMS filtra mascaras duplicadas del mismo objeto
+      3. "limites" -> DBSCAN -> poligono de cancha (cada 10 frames)
+      4. Cada instancia de "robot" -> DINOv2 embedding individual
+      5. Tracking identico a analisis_partido.py
+      6. Dibuja mascaras individuales, cajas, etiquetas y nombres de clase
+
+    Comando:
+      python analisis_partido/analisis_partido_2.py "video.mov"
+
+    Salida:
+      - analisis_2_<video>.mp4  (video con tracking y mascaras)
+      - centroides_2_<video>.csv (frame, robot_id, equipo, cx, cy, ball)
+      - vertices_2_<video>.csv   (frame, vertice, x, y del poligono)
+
+
+====================================================================
+  8. NOTAS IMPORTANTES
+====================================================================
+
+8.1 Archivo sam3.pt
+    - Modelo base de Meta (~3.4 GB)
+    - Solo lo usa analisis_partido.py 
+    - Requiere acceso a HuggingFace: https://huggingface.co/facebook/sam3
+
+8.2 Modelo fine-tuning (soccer_sam3_final/)
+    - Formato HuggingFace, listo para cargar con Sam3Model.from_pretrained()
+    - Lo usan: test_inference.py, prueba_video.py, analisis_partido_2.py
+    - NO es compatible con el codigo de analisis_partido.py (que usa ultralytics)
+
+8.3 Compatibilidad
+    - Todo el proyecto fue desarrollado y probado en Windows 11
+    - Entorno conda: supervision (Python 3.11)
+    - GPU: NVIDIA RTX 5050 Laptop (8 GB VRAM, CUDA 13.0)
