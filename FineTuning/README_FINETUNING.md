@@ -149,12 +149,9 @@ FineTuning/
   - Checkpoints en checkpoints/ (uno por epoca + el mejor)
   - Modelo final en soccer_sam3_final/ (listo para inferencia)
 
+# Prueba del modelo en imágenes
 
-====================================================================
-  5. PRUEBA DEL MODELO EN IMAGENES
-====================================================================
-
-5.1 Script: sam3_training/test_inference.py
+# 5.1 Script: sam3_training/test_inference.py
 
     Objetivo: Cargar el modelo fine-tuning y probarlo en imagenes
     individuales del dataset de validacion.
