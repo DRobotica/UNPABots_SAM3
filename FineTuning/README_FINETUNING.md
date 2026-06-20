@@ -45,4 +45,32 @@ pip install scikit-learn pycocotools opencv-python tqdm
 ```bash
  pip install jupyter
 ```
+# Preparación del dataset (Roboflow)
 
+### 2.1 Captura de datos
+* Se utilizaron videos de partidos de la Copa FutBolMX
+* Videos originales en: `DataForRoboflow/`
+* Se subieron a Roboflow (roboflow.com) para anotación
+
+### 2.2 Extracción de frames
+* Se extrajo 1 frame cada 2 segundos de cada video
+* Total de imágenes obtenidas: 1,537
+* Después de limpieza de datos duplicados/borrosos: 1,500 imágenes
+* De esas 1,500, se tomó solo el 10% (150 imágenes) para anotación
+* Se consideraron 5 clases: limites, pelota, porteria azul, porteria amarilla y robot
+* Las 150 imágenes se dividieron en: 120 train / 30 valid
+
+### 2.3 Segmentación semántica manual en Roboflow
+* Del total, se seleccionaron 150 imágenes para anotación
+* Se segmentaron manualmente 5 clases:
+    1. **limites** (líneas de la cancha)
+    2. **pelota** (balón de fútbol)
+    3. **porteria amarilla**
+    4. **porteria azul**
+    5. **robot** (todos los robots en general)
+
+### 2.4 División del dataset
+* 120 imágenes para entrenamiento (`train`)
+* 30 imágenes para validación (`valid`)
+* Formato de exportación: COCO Segmentation
+* Ubicación: `dataset/train/` y `dataset/valid/`
