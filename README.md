@@ -14,7 +14,7 @@ El sistema está optimizado para ejecutarse localmente aprovechando la aceleraci
 
 * Estabilización geométrica avanzada: Incorpora un filtro de historial de frames (promedio móvil) combinado con puntos de control basados en el centroide de las porterías para mitigar vibraciones y oclusiones en los vértices.
   
-* Exportación de elemetría:** Genera de manera incondicional un archivo `.csv` continuo con las coordenadas de píxeles y cenitales de los robots y la pelota frame a frame.
+* Exportación de elemetría: Genera de manera incondicional un archivo `.csv` continuo con las coordenadas de píxeles y cenitales de los robots y la pelota frame a frame.
   
 * Visualización de estadísticas: Con los datos del archivo `.csv` genera un video del tracking de los robots y la pelota y un mapa de calor del partido.
 
@@ -34,7 +34,11 @@ El proyecto está modularizado en dos componentes principales para facilitar su 
       
 Para la parte de visualización se tienen dos componentes:
 1. `generavideotracking.py`: Script donde se genera un video a partir de los datos del archivo `.csv` con la vista cenital de la cancha de forma animada donde se muestra el tracking de los robots y la pelota.
-2. `generamapacalor.py`: Script donde se genera un mapa de calor a partir de los datos del archivo `.csv` donde se muestran las partes del campo donde estuvieron los robot y la pelota el mayor tiempo.
+
+<img width="345" height="448" alt="Captura de pantalla 2026-06-20 051408" src="https://github.com/user-attachments/assets/462f6aed-8e90-425b-8218-d19ea55bec34" />
+
+
+3. `generamapacalor.py`: Script donde se genera un mapa de calor a partir de los datos del archivo `.csv` donde se muestran las partes del campo donde estuvieron los robot y la pelota el mayor tiempo.
 
 # Requisitos e Instalación
 
