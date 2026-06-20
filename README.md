@@ -6,20 +6,20 @@ Este proyecto implementa un pipeline de visión por computadora de dos etapas (Y
 El sistema está optimizado para ejecutarse localmente aprovechando la aceleración por hardware (CUDA) en GPUs de alto rendimiento (como la NVIDIA GeForce RTX 5070 Ti)
 
 # Características Clave
-* Pipeline de Detección y Segmentación Eficiente: Utiliza un modelo YOLO personalizado para detectar los elementos del juego y delega los bounding boxes a SAM 3 para obtener máscaras de segmentación ultra-precisas.
+* Pipeline de detección y segmentación eficiente: Utiliza un modelo YOLO personalizado para detectar los elementos del juego y delega los bounding boxes a SAM 3 para obtener máscaras de segmentación ultra-precisas.
   
-* Clasificación y Tracking con DINOv2: Extrae embeddings visuales de las ROIs de los robots y aplica métricas de similitud coseno junto con DBSCAN para agruparlos automáticamente en 2 equipos y mantener sus IDs de forma persistente (soporta hasta 4 IDs simultáneos en juego).
+* Clasificación y tracking con DINOv2: Extrae embeddings visuales de las ROIs de los robots y aplica métricas de similitud coseno junto con DBSCAN para agruparlos automáticamente en 2 equipos y mantener sus IDs de forma persistente (soporta hasta 4 IDs simultáneos en juego).
   
-* Homografía Rígida Automatizada: Corrige la perspectiva de la cámara para generar un plano táctico cenital basado en las dimensiones reales de la cancha ($219 \times 158$ cm) con una resolución escalada a 2 píxeles por centímetro.
+* Homografía rígida automatizada: Corrige la perspectiva de la cámara para generar un plano táctico cenital basado en las dimensiones reales de la cancha (219 x 158 cm) con una resolución escalada a 2 píxeles por centímetro.
 
-* Estabilización Geométrica Avanzada: Incorpora un filtro de historial de frames (promedio móvil) combinado con puntos de control basados en el centroide de las porterías para mitigar vibraciones y oclusiones en los vértices.
+* Estabilización geométrica avanzada: Incorpora un filtro de historial de frames (promedio móvil) combinado con puntos de control basados en el centroide de las porterías para mitigar vibraciones y oclusiones en los vértices.
   
-* Exportación de Telemetría: Genera de manera incondicional un archivo `.csv` continuo con las coordenadas de píxeles y cenitales de los robots y la pelota frame a frame.
+* Exportación de telemetría: Genera de manera incondicional un archivo `.csv` continuo con las coordenadas de píxeles y cenitales de los robots y la pelota frame a frame.
   
 * Visualización de estadísticas: Con los datos del archivo `.csv` genera un video del tracking de los robots y la pelota y un mapa de calor del partido.
 
 
-Arquitectura del Software
+# Arquitectura del Software
 
 El proyecto está modularizado en dos componentes principales para facilitar su mantenimiento:
 `helpers.py`: Módulo que aloja las funciones matemáticas y algorítmicas secundarias:
