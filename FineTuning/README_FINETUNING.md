@@ -171,7 +171,6 @@ FineTuning/
   * Guarda el resultado en /outputs/inferencia/
 <img width="1920" height="1080" alt="seg_IMG_9783_MOV-0000_jpg rf XwbzNYbAQiwDR4bbJRDN" src="https://github.com/user-attachments/assets/366b7767-69c9-4ec9-acb5-f3d0d0eec824" />
 
-
 * Comando:
  ```bash
       python sam3_training/test_inference.py
