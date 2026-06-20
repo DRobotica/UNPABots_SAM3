@@ -121,7 +121,7 @@ FineTuning/
 ```
 # Entrenamiento del modelo SAM3
 
-4.1 Script: sam3_training/train_sam3.py
+# 4.1 Script: sam3_training/train_sam3.py
 
     Objetivo: Entrenar el mask_decoder de SAM3 para que aprenda a segmentar
     las 5 clases del dataset usando prompts de texto.
