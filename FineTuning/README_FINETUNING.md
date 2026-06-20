@@ -138,10 +138,11 @@ FineTuning/
    - ~120 imagenes x ~4 clases = ~480 muestras de entrenamiento
    - Batch size: 4
 
-   * Duracion del entrenamiento:
-     - Aproximadamente 12 horas para 10 epocas
 
-   * Comando:
+  * Duracion del entrenamiento:
+    - Aproximadamente 12 horas para 10 epocas
+
+ * Comando:
   ```bash
       python sam3_training/train_sam3.py
    ```
