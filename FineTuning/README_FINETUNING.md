@@ -170,14 +170,12 @@ FineTuning/
     
   * Guarda el resultado en sam3_training/outputs/inferencia/
 
-  * Comando:
+* Comando:
  ```bash
       python sam3_training/test_inference.py
 ```
 
-====================================================================
-  6. PRUEBA DEL MODELO EN VIDEO
-====================================================================
+# Prueba del modelo en video
 
 6.1 Script: sam3_training/prueba_video.py
 
