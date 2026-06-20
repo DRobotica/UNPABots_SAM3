@@ -119,9 +119,7 @@ FineTuning/
 |-- recortado.mp4                   # Video recortado de prueba
 |-- LICENSE.txt
 ```
-====================================================================
-  4. ENTRENAMIENTO DEL MODELO SAM3 (FINE-TUNING)
-====================================================================
+# Entrenamiento del modelo SAM3
 
 4.1 Script: sam3_training/train_sam3.py
 
