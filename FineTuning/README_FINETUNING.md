@@ -145,10 +145,9 @@ FineTuning/
   ```bash
       python sam3_training/train_sam3.py
    ```
-   
-   * Salida:
-      - Checkpoints en checkpoints/ (uno por epoca + el mejor)
-      - Modelo final en soccer_sam3_final/ (listo para inferencia)
+* Salida:
+  - Checkpoints en checkpoints/ (uno por epoca + el mejor)
+  - Modelo final en soccer_sam3_final/ (listo para inferencia)
 
 
 ====================================================================
