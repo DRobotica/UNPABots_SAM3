@@ -106,7 +106,7 @@ El proyecto se desarrollo y ejecutó localmente en un equipo con las siguientes 
     - Formato de exportación: YOLOv8
     - Ubicación: FineTuningYOLOv8/dataset/train/ y FineTuningYOLOv8/dataset/valid/
   
-   <img width="1917" height="1032" alt="image" src="https://github.com/user-attachments/assets/1f688c5f-e54f-4cc8-b062-fcaca7636740" />
+<img width="1917" height="1032" alt="image" src="https://github.com/user-attachments/assets/1f688c5f-e54f-4cc8-b062-fcaca7636740" />
 
 
 
