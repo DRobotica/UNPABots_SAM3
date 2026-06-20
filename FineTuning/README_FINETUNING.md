@@ -77,3 +77,44 @@ pip install scikit-learn pycocotools opencv-python tqdm
 * Ubicación: `dataset/train/` y `dataset/valid/`
 
 <img width="1917" height="1027" alt="image" src="https://github.com/user-attachments/assets/a20b4e53-fff6-4531-9dba-7e144c7de5db" />
+
+# 3. Estructura del proyecto
+
+```text
+FineTuning/
+|
+|-- sam3_training/                  # Entrenamiento y pruebas básicas de SAM3
+|   |-- train_sam3.py               # Fine-tuning de SAM3 con HuggingFace
+|   |-- test_inference.py           # Prueba de segmentación en imágenes
+|   |-- prueba_video.py             # Prueba de segmentación en video
+|   |-- outputs/                    # Videos/imágenes generados por las pruebas
+|
+|-- analisis_partido/               # Análisis avanzado de partido (SAM3 + DINOv2)
+|   |-- analisis_partido.py         # Con SAM3 base (sam3.pt, vía ultralytics)
+|   |-- analisis_partido_2.py       # Con modelo fine-tuning (soccer_sam3_final)
+|   |-- outputs_tuned/              # Resultados del modelo fine-tuning
+|       |-- analisis_2_*.mp4        # Videos procesados
+|       |-- centroides_2_*.csv      # Posiciones de robots (frame, id, equipo, x, y)
+|       |-- vertices_2_*.csv        # Vértices de la cancha (frame, vertice, x, y)
+|
+|-- dataset/                        # Dataset COCO para entrenamiento
+|   |-- train/                      # 120 imágenes + _annotations.coco.json
+|   |-- valid/                      # 30 imágenes + _annotations.coco.json
+|
+|-- soccer_sam3_final/              # Modelo SAM3 fine-tuning (formato HuggingFace)
+|   |-- config.json                 # Configuración del modelo
+|   |-- model.safetensors           # Pesos del modelo entrenado
+|   |-- processor_config.json       # Configuración del procesador
+|   |-- tokenizer.json              # Tokenizador de texto
+|   |-- tokenizer_config.json
+|
+|-- checkpoints/                    # Checkpoints guardados durante el entrenamiento
+|   |-- sam3_soccer_decoder_epoch_*.pth
+|   |-- sam3_soccer_decoder_best.pth
+|
+|-- DataForRoboflow/                # Videos originales de partidos (.MOV)
+|-- sam3.pt                         # Modelo SAM3 base de Meta (~3.4 GB)
+|-- IMG_9796.MOV                    # Video de prueba
+|-- recortado.mp4                   # Video recortado de prueba
+|-- LICENSE.txt
+```
