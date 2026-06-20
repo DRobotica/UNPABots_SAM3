@@ -236,10 +236,12 @@ FineTuning/
   python analisis_partido/analisis_partido_2.py "video.mov"
  ```
  * Salida:
-   
+ * 
+```bash
  - analisis_2_<video>.mp4  (video con tracking y mascaras)
  - centroides_2_<video>.csv (frame, robot_id, equipo, cx, cy, ball)
  - vertices_2_<video>.csv   (frame, vertice, x, y del poligono)
+ ```
 
 <img width="1905" height="1076" alt="image" src="https://github.com/user-attachments/assets/5bbc4f56-567a-47f2-8f98-4a0281d61c65" />
 
