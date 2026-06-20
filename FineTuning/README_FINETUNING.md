@@ -57,12 +57,8 @@ pip install scikit-learn pycocotools opencv-python tqdm
 * Total de imágenes obtenidas: 1,537
 * Después de limpieza de datos duplicados/borrosos: 1,500 imágenes
 * De esas 1,500, se tomó solo el 10% (150 imágenes) para anotación
-* Se consideraron 5 clases: limites, pelota, porteria azul, porteria amarilla y robot
-* Las 150 imágenes se dividieron en: 120 train / 30 valid
-
 <img width="1912" height="1026" alt="image" src="https://github.com/user-attachments/assets/ace54ddd-39ea-4fbe-b7da-f26f1492d3b4" />
 
-<img width="1917" height="1027" alt="image" src="https://github.com/user-attachments/assets/a20b4e53-fff6-4531-9dba-7e144c7de5db" />
 
 
 ### 2.3 Segmentación semántica manual en Roboflow
@@ -79,3 +75,5 @@ pip install scikit-learn pycocotools opencv-python tqdm
 * 30 imágenes para validación (`valid`)
 * Formato de exportación: COCO Segmentation
 * Ubicación: `dataset/train/` y `dataset/valid/`
+
+<img width="1917" height="1027" alt="image" src="https://github.com/user-attachments/assets/a20b4e53-fff6-4531-9dba-7e144c7de5db" />
